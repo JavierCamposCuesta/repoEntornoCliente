@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <head>
+    <title>post</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" media="screen"></link>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div>
+      <a href="posts.html" class="enlace">Atrás</a>
+  </div>
+  <div class="divPost">
+    <h1 id="titulo">Titulo</h1>
+      <p id="cuerpo" class="cuerpo">Cuerpo</p>
+      <p id="fecha" class="fecha">Fecha de creación</p>
+      <p id="autor" class="autor">Autor</p>
+
+  </div>
+      <div class="  divComentario">
+
+        <table id="tabla" align="center" class="tablaComentrios">
+          <tr>
+              <td class="tdComentario"><b>Comentarios</b></td>
+              <td class="tdAutor"><b>Autor</b></td>
+          </tr>
+      </table>
+      <div class="escribirComentario">
+        <form id="form">
+            <div>
+                <textarea placeholder="Escribe tu comentario" id="comentario" cols="60"></textarea>
+                <select id="listaComentadores">
+                    <option value="1" >Anonimo</option>
+                </select>
+            </div>
+    
+            <div>
+                <input type="submit" value="Subir" id="boton" class="enlaceEnviar"></input>
+            </div>
+      </div>
+      </form>
+    </div>
+  </body>
+  <script src="post.js"></script>
+</html>

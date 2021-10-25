@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <head>
+    <title>addPost</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" media="screen"></link>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+      .oculto{
+          display: none;
+      }
+  </style>
+
+  <body>
+      <div>
+          <a href="posts.html"  class="enlace">Atrás</a>
+      </div>
+      <div class="container">
+
+          <div class="formulario">
+              <form id="form">
+                <div>
+                    <label><b>Titulo del Post</b></label>
+                    <input type="text" id="titulo" name="titulo">
+                </div>
+                <div>
+                    <textarea placeholder="Escribe tu post" id="cuerpoPost" cols="80"></textarea>
+                </div>
+                <div>
+                    <label><b>Escrito por:</b> </label>
+                    <select id="listaUsuarios">
+                    </select>
+                </div>
+                <div class="divBoton">
+                    <input type="submit" value="Subir" id="boton" class="enlaceEnviar"></input>
+                </div>
+               
+              </form>
+          </div>
+          <div  id="mensajeEnviado" class="oculto">
+              <p>Mensaje enviado correctamente</p>
+          </div>
+      </div>
+  </body>
+  <script src="addPost.js"></script>
+</html>
