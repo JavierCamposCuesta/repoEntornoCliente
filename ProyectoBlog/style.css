@@ -1,0 +1,150 @@
+.oculto{
+    display: none;
+}
+
+.formulario{
+    
+    background: rgb(151, 250, 253);
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 30px;
+
+}
+.container{
+    text-align: center;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form div label { /*aqui le damos un espacio a los inputs*/
+  display: inline-block; /*los label son contenedores del ancho de la palabra (igual que los span), por lo que tenemos que decirle que lo trate como un unico bloque*/
+  margin-right: 50px;
+  width: 200px;
+  margin-bottom: 10px;
+  }
+  .valido{
+      border: 2px solid green;
+      
+  }
+  .invalido{
+      border: 2px solid red;
+  }
+input{
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.titulo{
+    text-align: center;
+}
+
+/* listaPosts */
+.tablaPost{
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    
+}
+.tablaTitulos{
+    
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+  tr, td{
+    
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .enlace{
+      margin-left: 5px;
+      background: rgb(151, 250, 253);
+      padding: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+      border: 1px solid black;
+}
+.enlace:hover{
+    background: rgb(2, 94, 97);
+    color: white;
+}
+.addPost{
+    text-align: center;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+ 
+.enlaceEnviar{
+    margin-left: 5px;
+      background: rgb(151, 250, 253);
+      padding: 2px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+      border: 1px solid black;
+      
+}
+.enlaceEnviar:hover{
+    background: rgb(2, 94, 97);
+    color: white;
+}
+.divBoton{
+    text-align: center;
+}
+
+.divPost{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgb(151, 250, 253);
+}
+
+.divComentario{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+   
+    background: rgb(151, 250, 253);
+    margin-top: 50px;
+}
+
+.tdAutor{
+    width: 100px;
+    border-left: 1px solid black;
+    
+}
+.tdComentario{
+    width: 500px;
+   
+}
+.escribirComentario{
+    margin-top: 50px;
+    
+}
+

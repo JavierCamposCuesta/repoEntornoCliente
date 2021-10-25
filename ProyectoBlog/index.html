@@ -1,0 +1,94 @@
+<!-- La idea es hacer un blog que contendrá lo siguiente
+1. Tendremos un fichero json con las tablas que vamos a necesitar
+    usuario
+        -Nombre
+        -Apellidos
+        -Nick
+        -Fecha nacimiento
+        -dni
+
+    post
+        -Titulo
+        -Autor
+        -Contenido
+
+    comentarios
+        -Titulo
+        -Comentador
+        -Comentario
+        -Fecha
+        postId
+
+2. index.html será una pagina de registro, con los siguientes campos, estos campos tendrán sus correspondientes validaciones
+    -Nombre
+    -Apellidos
+    -Nick
+    -Fecha nacimiento
+    -dni
+    -Contendrá un boton de registro que una vez validados todos los campos creará en la tabla usuario un nuevo campos
+
+3. listaPost.html será la pagina que contendrá los post creados
+    -Aparecerá una lista con el titulo de cada post junto al autor 
+    -Se podrá seleccionar el post que se elija para verlo mas en profundidad, lo cual nos transladará al archivo post.hmtl
+    -Se podrá eliminar el post que se elija
+    -(Dos botones, ver post y eliminar post)
+
+4. post.html será la página que contendrá el post detallado, está página contendrá lo siguiente
+    -Titulo del post
+    -Contenido
+    -Autor
+    -Lista de comentarios que pertenecen al post
+    -Campos para poder escribir un comentario, habrá un desplegable para elegir el autor del comentario, se introducirá ñla fecha del comentario -->
+   
+<!DOCTYPE html>
+  <head>
+    <title>Registrarse</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" media="screen"></link>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+ 
+
+  <body>
+      <div class="container">
+          <h1 class="titulo">Todo Posts</h1>
+          <div class="formulario">
+              <h2>Registrarse</h2>
+            <form id="form" action="" method="get">
+                <div>
+                    <label>Indique su nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div>
+                    <label>Indique su nick</label>
+                    <input type="text" id="nick" name="nick">
+                </div>
+                <div>
+                    <label>Indique su edad</label>
+                    <input type="text" id="edad" name="edad">
+                </div>
+                <div>
+                    <label>Introduce tu e-mail</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div>
+                    <label>Introduce tu contraseña</label>
+                    <input type="text" id="passw" name="passw">
+                </div>
+                <div>
+                    <label>Acepta los términos</label>
+                    <input type="checkbox" id="terminos" name="terminos">
+                </div>
+                <div class="divBoton">
+                    <input type="submit" id="boton" value="Enviar" class="enlaceEnviar" >
+                </div>
+        
+            </form>
+          </div>
+      </div>
+   
+  </body>
+  <script src="index.js"></script>
+</html>
