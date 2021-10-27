@@ -8,40 +8,41 @@ let cuerpoPost = document.getElementById("cuerpoPost");
 let listaUsuarios = document.getElementById("listaUsuarios");
 
 //Leemos para hacer la seleccion de todos los perfiles
-let peticion = new XMLHttpRequest();
-peticion.open('GET', "http://localhost:3000/profile");
-peticion.send();
-peticion.addEventListener('readystatechange', function() {
-    console.log("Estado de la petición: " + peticion.readyState);
-    if (peticion.readyState === 4) {
-        if (peticion.status === 200) {
-            console.log("Datos recibidos:");
-            
-            
-            
-            let usuarios = JSON.parse(peticion.responseText); // Convertirmos los datos JSON a un objeto
-            let listaUsuarios = document.getElementById("listaUsuarios");
-            
-            
-            for(i = 0; i< usuarios.length; i++){
-        let option = document.createElement('option');
-        let valor = (i+1);
-        let texto = usuarios[i].name;
-        option.value=valor;
-        option.text=texto;
-        listaUsuarios.appendChild(option);
-        let indiceOption = 0;
 
-       
-       
+            
+ 
+fetch('http://localhost:3000/profile', {
+})
+.then(response => {
+
+
+    if(response.ok){
+        return response.json()
     }
+    return Promise.reject(response)
+ } )
+.then(data => {
+    let listaUsuarios = document.getElementById("listaUsuarios");
+   data.forEach(element => {
+
+       let option = document.createElement('option');
+       let valor = (element.postId);
+       let texto = element.name;
+       option.value=valor;
+       option.text=texto;
+       listaUsuarios.appendChild(option);
+       
+   })
     
-    console.log(usuarios);
-    } else {
-    console.log("Error " + peticion3.status + " (" + peticion3.statusText + ") en la petición");
-    }
-    }
-    }); 
+    
+    
+    
+})
+.catch(error => alert("Hay error al recuperar la información4"));
+   
+    
+            
+    
 
 //Creamos un evento para cuando cambie la seleccion de usuario
 listaUsuarios.addEventListener("change", ()=>{indiceOption=listaUsuarios.selectedIndex;});

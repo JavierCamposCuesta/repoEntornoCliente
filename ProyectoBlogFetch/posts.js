@@ -1,7 +1,8 @@
 let tabla = document.getElementById("tabla");
 
     fetch('http://localhost:3000/posts', {
-    }).then(response => response.json()).then(data => {
+    }).then(response => response.json())
+    .then(data => {
             data.forEach(post => {
 
                 let enlace = "post.html?id=" + post.id;
@@ -16,11 +17,24 @@ let tabla = document.getElementById("tabla");
                 //console.log(enlaceBorrado(enlaceBorrado));
                 enlaceBorrado.addEventListener("click", (e) => {
                     e.preventDefault();
-                    let peticion2 = new XMLHttpRequest();
+                    fetch('http://localhost:3000/posts/' + post.id, {
+                        method: 'DELETE',
+                    })
+                    .then(response => {
 
-                    peticion2.open('DELETE', 'http://localhost:3000/posts/' + post.id);
-                    peticion2.send();
-                    peticion2.addEventListener('load', ()=>{location.reload()})  //Comprueba que el formulario se ha enviado y luego ejecuta el cambio de pagina
+
+                        if(response.ok){
+                            return response.json()
+                        }
+                        return Promise.reject(response)
+                     } )
+                    .then(data=>{
+                        location.reload();
+                    })
+                    .catch(error => alert("Hay error al recuperar la información"));
+
+
+                     //Comprueba que el formulario se ha enviado y luego ejecuta el cambio de pagina
                 })})
 
     }).catch(error => alert("Hay error al recuperar la información"))

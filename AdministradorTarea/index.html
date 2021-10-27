@@ -1,0 +1,118 @@
+<!-- Tenemos que hacer un administrador de tareas, el cual tenga un campo que sea para la descripcion y un boton de añadir
+Una vez pulsamos el boton de añadir la tarea sube y se muestra arriba con las demas tareas creadas
+cada tarea tendrá un botón para especificar que se está realizando, este boton subrayará la tarea o la cambiará de color
+Cada tarea tendrá tambien un botón para eliminarla -->
+
+<!DOCTYPE html>
+  <head>
+    <title>index</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" media="screen"></link>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+<style>
+    .tachado{
+        text-decoration: line-through;
+    }
+    li{
+        list-style: none;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    a.enlaceEliminar{
+        margin-left: 10px;
+		text-decoration: none;
+		font-size: 1rem;
+    }
+    #contenedorTareas input{
+        
+        margin-left: 25%;
+        
+    }
+    #contenedorTareas span{
+       
+        margin-left: 2%;
+        
+    }
+    #contenedorTareas a{
+       
+       color: black;
+       background: white;
+       border-radius: 2px;
+       padding-left: 2px;
+       padding-right: 2px;
+       border: 1px solid black;
+       font-size: 13px;
+   }
+
+   #contenedorTareas a:hover{
+       
+       color: white;
+       background: red;
+       border-radius: 2px;
+       padding-left: 2px;
+       padding-right: 2px;
+       border: 1px solid black;
+       font-size: 13px;
+   }
+    table{
+width: 70%;
+
+    }
+
+    .container{
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+background-color: rgb(187, 211, 174);
+text-align: center;
+padding-top: 80px;
+padding-bottom: 80px;
+border: 2px black solid;
+
+}
+
+.form{
+    margin-top: 50px;
+
+}
+
+.tabla, td{
+   
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    background: rgb(65, 100, 57);
+}
+  
+    
+    
+    
+
+    
+</style>
+  <body>
+      <div class="container">
+          <table id="tabla" class="tabla">
+              <tr>
+                  <td>Realizando</td>
+                  <td>Descripción</td>
+                  <td>Eliminar</td>
+              </tr>
+          </table>
+          <ul id="contenedorTareas"></ul>
+          
+          <form class="form" id="form">
+              <div>
+                  <input placeholder="Descripción de la tarea" id="descripcion"></input>
+              </div>
+              <div>
+                  <input type="submit" id="boton" value="Añadir tarea">
+              </div>
+          </form>
+      </div>
+  </body>
+  <script src="index.js"></script>
+</html>
