@@ -8,14 +8,10 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div id="pending-tasks" class="tasks">
         <h2 class="title">Pending Tasks</h2>
-        <div id="task-1" class="task" draggable="true">Task 1</div>
-        <div id="task-2" class="task" draggable="true">Task 2</div>
-        <div id="task-3" class="task" draggable="true">Task 3</div>
-        <div id="task-4" class="task" draggable="true">Task 4</div>
-        <div id="task-5" class="task" draggable="true">Task 5</div>
+        
       </div>
       
       <div id="doing-tasks" class="tasks">
@@ -26,6 +22,17 @@
         <h2 class="title">Finished Tasks</h2>
       </div>
     </div>
+    <form class="form" id="form">
+      <div>
+          <input placeholder="Descripción de la tarea" id="descripcion"></input>
+      </div>
+      <div>
+          <input type="submit" id="boton" value="Añadir tarea">
+      </div>
+      <div>
+        <input type="button" id="reset" value="Borrar todo">
+    </div>
+  </form>
     <script src="scripyDragDrop3.js"></script>
   </body>
 

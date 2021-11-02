@@ -28,7 +28,7 @@ function addTarea(){
 }
 
 
-
+actualizarTareas();
 function actualizarTareas(){
     contenedorTareas.innerHTML=("");
     // Añadimos el boton eliminar
