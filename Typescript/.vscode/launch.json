@@ -8,7 +8,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Typescript/salida/prueba.js",
+            "program": "${workspaceFolder}/salida/utilizaOperaciones.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
