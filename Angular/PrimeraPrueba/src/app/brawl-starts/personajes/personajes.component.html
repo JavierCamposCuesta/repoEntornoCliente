@@ -1,0 +1,13 @@
+<h2>Personajes:</h2>
+<hr>
+<ul>
+    <li *ngFor="let personaje of personajes" [ngClass]="{rojo: personaje.salud<2000, verde: personaje.salud>=3000, amarillo: personaje.salud >=2000 && personaje.salud<3000}">
+    {{personaje.nombre}} - {{personaje.salud}}
+    </li>
+</ul>
+
+
+<!-- nuevo componente agregar -->
+<!-- desde h3 hast /form -->
+<!-- @input de personajes -->
+<!-- @input nuevo para mandar informacion por defecto al formulario -->

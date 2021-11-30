@@ -1,4 +1,4 @@
-<h1>Bienvenido a {{ title }}</h1>
+<!-- <h1>Bienvenido a {{ title }}</h1>
 <div>
   <p>Nombre del empleado: {{nombre}}</p>
   <p>Edad: {{edad}}</p>
@@ -6,32 +6,28 @@
   <p>En los últimos 3 meses ha ganado: {{ultimosSueldos()}}</p>
   <p>{{esActivo()}}</p>
   <p>El empleado dentro de 5 años tendrá {{edad+5}}</p>
-</div>
+</div> -->
 
 <!-- if else -->
-<p *ngIf="edad >= 18" style="color: green;">Es mayor de edad</p>
-<p *ngIf="edad < 18" style="color: red;">Es menor de edad</p>
+<!-- <p *ngIf="edad >= 18" style="color: green;">Es mayor de edad</p>
+<p *ngIf="edad < 18" style="color: red;">Es menor de edad</p> -->
 
 <!-- bucle for -->
-<tr *ngFor="let sueldo of sueldos">
+<!-- <tr *ngFor="let sueldo of sueldos">
   <td style="border: 1px solid black;">{{sueldo}}</td>
-</tr>
+</tr> -->
 
 <!-- if else -->
-<p *ngIf="edad >= 18; else menor">Es mayor de edad</p>
-<ng-template #menor><p>Es menor de edad</p></ng-template>
+<!-- <p *ngIf="edad >= 18; else menor">Es mayor de edad</p>
+<ng-template #menor><p>Es menor de edad</p></ng-template> -->
 
-<div>
-  <p>{{contador}}</p>
-  <button (click)="incrementar()">Sumar</button>
-  <button (click)="decrementar()">Sumar</button>
-
-</div>
-
-<input type="text" [(ngModel)]="nombreInput" placeholder="Introduce tu nombre">
+<!-- <input type="text" [(ngModel)]="nombreInput" placeholder="Introduce tu nombre"> -->
 <br>
-<input type="text" [(ngModel)]="apellidoInput" placeholder="Introduce tus apellidos">
-<p>{{nombreInput}}, {{apellidoInput}}</p>
+<!-- <input type="text" [(ngModel)]="apellidoInput" placeholder="Introduce tus apellidos"> -->
+<!-- <p>{{nombreInput}}, {{apellidoInput}}</p> -->
+<!-- <app-alumno></app-alumno> -->
+<!-- <app-contador></app-contador> -->
+<app-main-page></app-main-page>
 
 
 

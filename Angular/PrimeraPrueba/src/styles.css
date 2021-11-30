@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Pongo este stylo de esta clase para probar que la hoja de estilo del componente tiene
+preferencia a esta hoja que es general */
+.divContador{
+    background-color: red;
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}

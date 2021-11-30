@@ -1,0 +1,24 @@
+
+<h1>Lista alumnos</h1>
+<ul>
+    <li *ngFor= "let alumno of alumnos;
+    let i=index; let par=odd; let impar=even;"
+    [ngClass]="{azul:par, verde:impar}">
+    {{i+1}} - {{alumno}}
+
+    </li>
+    <button (click)="eliminar()" *ngIf="alumnos.length >0">Eliminar</button>
+    <p *ngIf="alumnos.length ==0">Eres to malo, añade algún alumno a la lista hombre</p>
+    <h2 *ngIf="eliminados.length >0; else vacio">Eliminados</h2>
+    <ul>
+        <li *ngFor="let eliminado of eliminados;
+        let i = index;">
+        {{i+ 1}} - {{eliminado}}
+        </li>
+    </ul>
+
+    <button (click)="addAlumnos()" *ngIf="eliminados.length >0">Añadir</button>
+    <ng-template #vacio>
+        <h2>No hay nadie eliminado</h2>
+    </ng-template>
+</ul>

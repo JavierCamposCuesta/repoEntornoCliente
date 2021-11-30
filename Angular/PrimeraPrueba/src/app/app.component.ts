@@ -12,9 +12,12 @@ export class AppComponent {
   email: string = "javiercamposcuesta@gmail.com";
   sueldos:Array<number> = [1300, 1600, 2000];
   activo:boolean = true;
-  contador:number = 1;
+
   nombreInput:string="";
   apellidoInput:string="";
+
+  
+  valorInput:number = 1;
 
  esActivo(){
    if(this.activo){
@@ -33,12 +36,8 @@ export class AppComponent {
    return suma;
  }
 
- incrementar(){
-   this.contador++;
- }
+ 
 
- decrementar(){
-   this.contador--;
- }
+
 
 }
