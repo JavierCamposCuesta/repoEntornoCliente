@@ -1,0 +1,20 @@
+.oculto{
+    display: none;
+}
+
+input{
+    display: block;
+}
+
+.disponible{
+    color: green;
+}
+.noDisponible{
+    color: red;
+}
+
+.table, table td{
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+}

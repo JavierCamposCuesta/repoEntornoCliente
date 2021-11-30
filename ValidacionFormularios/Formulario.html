@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <head>
+    <title>Formulario</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+      .oculto{
+          display: none;
+      }
+      
+      .formulario{
+          
+          background-color: rgb(176, 239, 255);
+          text-align: justify;
+          margin-left: auto;
+          margin-right: auto;
+          justify-content: center;
+          padding: 30px;
+          border-radius: 30px;
+
+      }
+      .container{
+          text-align: center;
+         
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+      }
+
+      form div label { /*aqui le damos un espacio a los inputs*/
+		display: inline-block; /*los label son contenedores del ancho de la palabra (igual que los span), por lo que tenemos que decirle que lo trate como un unico bloque*/
+        margin-right: 50px;
+        width: 200px;
+        margin-bottom: 10px;
+        }
+        .valido{
+            border: 3px solid green;
+            
+        }
+        .invalido{
+            border: 3px solid red;
+        }
+    input{
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+    }
+  </style>
+
+  <body>
+      <div class="container">
+
+      
+    <h1>Validaciones con formularios</h1>
+    <div class="formulario">
+
+        <form id="form" action="http://www.iesjacaranda.es/lmsgi/resultado.php" method="get">
+            <div>
+                <label>Indique su nombre</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div>
+                <label>Indique sus apellidos</label>
+                <input type="text" id="apellidos" name="apellidos">
+            </div>
+            <div>
+                <label>Indique su edad</label>
+                <input type="text" id="edad" name="edad">
+        </div>
+        <div>
+            <label for="hijos">¿Tiene hijos?</label>
+            <input type="radio" value="Si" name="hijos" id="hijosSi">Si
+            <input type="radio" value="No" name="hijos" id="hijosNo">No
+        </div>
+        <div class="oculto" id="numeroHijosDiv">
+            <label>Numero de hijos</label>
+            <input type="text" id="numeroHijos" name="numeroHijos">
+        </div>
+        <div>
+            <label>Indique su dni</label>
+            <input type="text" id="dni" name="dni">
+        </div>
+        <div>
+            
+            <label for="estado-civil">Estado civil</label>
+            <input type="radio" name="estado-civil" value="Casado" id="eCasado">Casado
+            <input type="radio" name="estado-civil" value="Soltero" id="eSoltero">Soltero
+            <input type="radio" name="estado-civil" value="Divorciado" id="eDivorciado">Divorciado
+            <input type="radio" name="estado-civil" value="Viudo" id="eViudo">Viudo
+            <input type="radio" name="estado-civil" value="No contesta" id="eNo">No especificar
+        </div>
+        <div class="oculto" id="yearCasadoDiv">
+            <label>¿Cuantos años llevas casado?</label>
+            <input type="text" id="yearCasado" name="casado">
+        </div>
+        <div class="oculto" id="yearSolteroDiv">
+            <label>¿Cuantos años llevas soltero?</label>
+            <input type="text" id="yearSoltero" name="soltero">
+        </div>
+        <div class="oculto" id="yearDivorciadoDiv">
+            <label>¿Cuantos años llevas divorciado?</label>
+            <input type="text" id="yearDivorciado" name="divorciado">
+        </div>
+        <div class="oculto" id="yearViudoDiv">
+            <label>¿Cuantos años llevas viudo?</label>
+            <input type="text" id="yearViudo" name="viudo">
+        </div>
+        <div>
+            <label>Introduce tu e-mail</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label>Acepta los términos</label>
+            <input type="checkbox" id="terminos" name="terminos">
+        </div>
+        <div>
+            <input type="submit" id="boton" value="Enviar" style="outline: auto;">
+        </div>
+    </form>
+</div>
+</div>
+
+</body>
+<script src="Formulario.js"></script>
+</html></html>
